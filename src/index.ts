@@ -2,6 +2,9 @@ import express from 'express';
 
 // Cria uma instância do aplicativo Express
 const app = express();
+//esqueci de transformar o body em json
+//coloque isso no codigo
+app.use(express.json());
 
 type Filme = {
     id: number,
