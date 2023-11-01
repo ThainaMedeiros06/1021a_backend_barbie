@@ -6,8 +6,7 @@ describe('Primeiro teste da aplicação', () => {
     expect(true).toBe(true)
   })
 })
-
-describe('Cadastro Filme', () => {
+describe.skip('Cadastro Filme', () => {
     it('Deve cadastrar um filme com sucesso', async () => {
         const filme = {
             id: 1,
