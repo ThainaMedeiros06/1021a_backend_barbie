@@ -1,5 +1,7 @@
-export default class BancoEmMemoria{
-    public dados:any[] = []
+import FilmeRepositorioInterface from "../../aplicacao/filme-repositorio-interface"
+
+export default class BancoEmMemoria implements FilmeRepositorioInterface{
+    public dados:Filme[] = []
     constructor(){}
     public salvar(input:Filme):Promise<boolean>{
         this.dados.push(input)
