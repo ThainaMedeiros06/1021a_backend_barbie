@@ -15,7 +15,7 @@ app.get('/filmes', async (req, res) => {
 
 app.post('/filmes', (req:Request, res) => {
     const salvaFilme = new SalvaFilme(bancoMongoDB)
-    const filmes = salvaFilme
+    const filmes = salvaFilme.salvar(filme)
     const {id, titulo, descricao, foto} = req.body
     const filme:Filme = {
         id,
