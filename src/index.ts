@@ -1,13 +1,14 @@
 import express, {Request} from 'express';
+import cors from 'cors'
+const app = express()
+app.use(express.json())
+app.use(cors())
 import BancoMongoDB from './infra/banco/banco-mongodb';
 import ListarFilme from './aplicacao/listar-filme.use-case';
 import SalvarFilme from './aplicacao/salva-filme.use-case';
 
 // Cria uma instância do aplicativo Express
 const bancoMongoDB = new BancoMongoDB();
-
-const app = express();
-app.use(express.json())
 
 // Define uma rota padrão
 app.get('/filmes', async (req, res) => {
